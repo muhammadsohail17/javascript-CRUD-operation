@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        HTML form with CRUD operation
+    </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <table>
+        <tr>
+            <td>
+                <form onsubmit="onFormSubmit(); event.preventDefault()"; autocomplete="off">
+                  <h2>Registration form</h2>
+                  <hr>
+                    <div>
+                        <label>Name</label>
+                        <input type="text" name="name" id="name">
+                        <span id="usererror" style="color: red;"></span>
+                    </div>
+                    <div>
+                        <label>Email</label>
+                        <input type="email" name="email" id="email">
+                        <span id="emailerror" style="color: red;"></span>
+                    </div>
+                    <div>
+                        <label>Contact</label>
+                        <input type="tel" name="contact" id="contact">
+                        <span id="contacterror" style="color: red;"></span>
+                    </div>
+                    <div>
+                        <label>City</label>
+                        <select name="city" id="city">
+                            <option>Islamabad</option>
+                            <option>Lahore</option>
+                            <option>Karachi</option>
+                            <option>Peshawar</option>
+                          </select>
+                        <span id="cityerror" style="color: red;"></span>
+                    </div>
+                    <div>
+                        <label>Password</label>
+                        <input type="password" name="password" id="psw">
+                        <span id="passworderror" style="color: red;"></span>
+                    </div>
+                    <div  class="form-action-buttons">
+                        <input type="submit" value="Submit">
+                    </div>
+                </form>
+            </td>
+            <td>
+                <table class="list" id="employeeList">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Contact</th>
+                            <th>City</th>
+                            <th>Password</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+    </table>
+    <script src="index.js"></script>
+</body>
+
+</html> 
